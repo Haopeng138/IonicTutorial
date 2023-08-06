@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { MenuPageRoutingModule } from './menu-routing.module';
 
 import { MenuPage } from './menu.page';
-
+import { SharedComponentsModule } from 'src/app/components/shared-components.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuPageRoutingModule
+    MenuPageRoutingModule,
+    SharedComponentsModule
   ],
   declarations: [MenuPage]
 })

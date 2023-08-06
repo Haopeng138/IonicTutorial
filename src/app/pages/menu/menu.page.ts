@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPage implements OnInit {
 
-  constructor() { }
+  menuItems = [
+    {
+      title: 'Home',
+      icon: 'home',
+      path: '/'
+    },
+    {
+      title: 'Products',
+      icon: 'list',
+      path: '/products'
+    },
+    {
+      title: 'About',
+      icon: 'information',
+      path: '/about'
+    }
+  ]
+  constructor(private menuCtrl: MenuController) { }
 
   ngOnInit() {
+  }
+
+  setTitle(title: string) {
+    console.log(title);
   }
 
 }
